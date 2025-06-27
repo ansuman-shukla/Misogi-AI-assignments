@@ -1,0 +1,105 @@
+# Model Configuration
+# This file defines available models for each provider
+
+openai:
+  base:
+    default: "gpt-3.5-turbo-instruct"
+    models:
+      - "gpt-3.5-turbo-instruct"
+      - "text-davinci-003"
+    characteristics:
+      context_window: 4096
+      strengths: ["Text completion", "Creative writing"]
+      use_cases: ["Creative tasks", "Open-ended completion"]
+
+  instruct:
+    default: "gpt-3.5-turbo"
+    models:
+      - "gpt-3.5-turbo"
+      - "gpt-3.5-turbo-16k"
+      - "gpt-4"
+      - "gpt-4-turbo"
+      - "gpt-4o"
+      - "gpt-4o-mini"
+    characteristics:
+      context_window: 4096
+      strengths: ["Instruction following", "Q&A", "Task completion"]
+      use_cases: ["General assistance", "Analysis", "Problem solving"]
+
+  fine_tuned:
+    default: null
+    models: []
+    characteristics:
+      context_window: 4096
+      strengths: ["Domain specialization"]
+      use_cases: ["Custom applications"]
+
+anthropic:
+  base:
+    default: null
+    models: []
+    characteristics:
+      context_window: 200000
+      strengths: []
+      use_cases: []
+
+  instruct:
+    default: "claude-3-sonnet-20240229"
+    models:
+      - "claude-3-haiku-20240307"
+      - "claude-3-sonnet-20240229"
+      - "claude-3-opus-20240229"
+      - "claude-3-5-sonnet-20240620"
+      - "claude-2.1"
+      - "claude-instant-1.2"
+    characteristics:
+      context_window: 200000
+      strengths: ["Complex reasoning", "Analysis", "Safety"]
+      use_cases: ["Research", "Content analysis", "Complex Q&A"]
+
+  fine_tuned:
+    default: null
+    models: []
+    characteristics:
+      context_window: 200000
+      strengths: ["Domain specialization"]
+      use_cases: ["Custom applications"]
+
+huggingface:
+  base:
+    default: "meta-llama/Llama-2-7b-hf"
+    models:
+      - "meta-llama/Llama-2-7b-hf"
+      - "meta-llama/Llama-2-13b-hf"
+      - "mistralai/Mistral-7B-v0.1"
+      - "EleutherAI/gpt-neo-2.7B"
+    characteristics:
+      context_window: 4096
+      strengths: ["Open source", "Customizable"]
+      use_cases: ["Research", "Self-hosting", "Fine-tuning base"]
+
+  instruct:
+    default: "meta-llama/Llama-2-7b-chat-hf"
+    models:
+      - "meta-llama/Llama-2-7b-chat-hf"
+      - "meta-llama/Llama-2-13b-chat-hf"
+      - "mistralai/Mistral-7B-Instruct-v0.1"
+      - "HuggingFaceH4/zephyr-7b-beta"
+      - "openchat/openchat-3.5-1210"
+    characteristics:
+      context_window: 4096
+      strengths: ["Chat optimization", "Open source"]
+      use_cases: ["Conversational AI", "Open alternatives"]
+
+  fine_tuned:
+    default: "codellama/CodeLlama-7b-Python-hf"
+    models:
+      - "codellama/CodeLlama-7b-Python-hf"
+      - "codellama/CodeLlama-7b-Instruct-hf"
+      - "WizardLM/WizardCoder-15B-V1.0"
+      - "Salesforce/codegen-2B-Python"
+      - "bigcode/starcoderbase-1b"
+    characteristics:
+      context_window: 16384
+      strengths: ["Code generation", "Programming tasks"]
+      use_cases: ["Code completion", "Programming assistance"]
