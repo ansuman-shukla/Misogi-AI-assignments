@@ -1,0 +1,12 @@
+# Requirements for Tool-Enhanced Reasoning project
+
+# Google Generative AI SDK
+google-genai
+
+# Additional dependencies for enhanced functionality
+requests
+
+# Development dependencies (optional)
+# pytest
+# black
+# flake8
